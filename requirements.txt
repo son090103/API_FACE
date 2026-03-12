@@ -120,7 +120,7 @@ sympy==1.14.0
 tenacity==9.1.2
 threadpoolctl==3.6.0
 tifffile==2025.5.26
-tokenizers==0.22.1
+tokenizers==0.19.1
 torch==2.3.1
 tornado==6.5.2
 tqdm==4.67.1
