@@ -8,10 +8,12 @@ from datetime import datetime
 from bson import ObjectId   # ⭐ QUAN TRỌNG
 
 # ===================== MONGODB =====================
-MONGO_URI = "mongodb://localhost:27017/"
-DB_NAME = "DriverSystem"
+# MONGO_URI = "mongodb://localhost:27017/"
+# DB_NAME = "DriverSystem"
+# USER_COLLECTION = "users"
+MONGO_URI = "mongodb+srv://daoson090103_db_user:Np2xYjUwyTQOwb1M@cluster0.5qswe4y.mongodb.net/"
+DB_NAME="DriverSystem"
 USER_COLLECTION = "users"
-
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
 users_col = db[USER_COLLECTION]
