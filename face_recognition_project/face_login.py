@@ -11,7 +11,7 @@ from datetime import datetime
 # MONGO_URI = "mongodb://localhost:27017/"
 # DB_NAME = "DriverSystem"
 # USER_COLLECTION = "users"
-MONGO_URI = "mongodb+srv://daoson090103_db_user:Np2xYjUwyTQOwb1M@cluster0.5qswe4y.mongodb.net/DriverSystem"
+MONGO_URI = "mongodb+srv://daoson090103_db_user:Np2xYjUwyTQOwb1M@cluster0.5qswe4y.mongodb.net/"
 DB_NAME="DriverSystem"
 USER_COLLECTION = "users"
 client = MongoClient(MONGO_URI)
