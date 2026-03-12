@@ -83,7 +83,6 @@ pyasn1==0.6.0
 pyasn1_modules==0.4.0
 pycparser==2.22
 pydantic==2.9.2
-pydantic_core==2.20.1
 pylsqpack==0.3.18
 pymongo==4.8.0
 PyMuPDF==1.24.9
