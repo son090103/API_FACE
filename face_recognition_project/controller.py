@@ -1,7 +1,7 @@
 from fastapi import FastAPI, APIRouter
 from pydantic import BaseModel
-from face_login import face_login
-from face_register import face_register 
+from face_recognition_project.face_login import face_login
+from face_recognition_project.face_register import face_register
 # ================= APP =================
 app = FastAPI()
 
