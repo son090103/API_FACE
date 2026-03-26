@@ -7,7 +7,7 @@ from pymongo import MongoClient
 from bson import ObjectId
 from datetime import datetime
 
-from face_model import get_face_app
+from face_recognition_project.face_model import get_face_app
 
 # ===================== MONGODB =====================
 MONGO_URI = os.environ.get(

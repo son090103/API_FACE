@@ -41,3 +41,4 @@ def face_register_controller(data: FaceRegisterRequest):
             "success": False,
             "error": str(e)
         }
+# app.include_router(router)
