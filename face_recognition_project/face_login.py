@@ -2,28 +2,24 @@ import os
 import base64
 import cv2
 import numpy as np
-from insightface.app import FaceAnalysis
 from numpy.linalg import norm
 from pymongo import MongoClient
 from bson import ObjectId
 from datetime import datetime
 
+from face_model import get_face_app
+
 # ===================== MONGODB =====================
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb+srv://daoson090103_db_user:Np2xYjUwyTQOwb1M@cluster0.5qswe4y.mongodb.net/DriverSystem")
+MONGO_URI = os.environ.get(
+    "MONGO_URI",
+    "mongodb+srv://daoson090103_db_user:Np2xYjUwyTQOwb1M@cluster0.5qswe4y.mongodb.net/DriverSystem"
+)
 DB_NAME = os.environ.get("DB_NAME", "DriverSystem")
 USER_COLLECTION = "users"
 
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
 users_col = db[USER_COLLECTION]
-
-# ===================== LOAD MODEL =====================
-face_app = FaceAnalysis(
-    name="buffalo_l",
-    providers=["CUDAExecutionProvider", "CPUExecutionProvider"]
-)
-face_app.prepare(ctx_id=0, det_size=(640, 640))
-print("✅ face_login model loaded")
 
 # ===================== UTILS =====================
 def decode_base64_image(base64_str: str):
@@ -51,6 +47,7 @@ def face_login(user_id: str, image_base64: str):
     if frame is None:
         return {"success": False, "message": "Invalid image"}
 
+    face_app = get_face_app()
     faces = face_app.get(frame)
     if not faces:
         return {"success": False, "message": "No face detected"}
