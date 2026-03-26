@@ -41,4 +41,7 @@ def face_register_controller(data: FaceRegisterRequest):
             "success": False,
             "error": str(e)
         }
+@router.get("/")
+def root():
+    return {"status": "ok"}
 # app.include_router(router)
