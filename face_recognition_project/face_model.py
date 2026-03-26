@@ -2,7 +2,7 @@ from insightface.app import FaceAnalysis
 
 # 🔥 load ngay khi import
 face_app = FaceAnalysis(
-    name="buffalo_s",
+    name="buffalo_l",
     providers=["CPUExecutionProvider"]
 )
 
